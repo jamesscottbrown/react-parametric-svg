@@ -1,6 +1,6 @@
 {
   "name": "react-parametric-svg",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A React component for rendering a parametric SVG",
   "main": "dist/index.js",
   "scripts": {

@@ -161,7 +161,7 @@ const PreviewSVG = ({params, defaultParams, tree, updateSVGString}) => {
 
 
 // This is the entrypoint if you just want to render a parametric SVG
-const ParamatericSVG = ({svgString, params, onParse, innerOnly}) => {
+const ParametricSVG = ({svgString, params, onParse, innerOnly}) => {
     const {parameters, defaultParameters: defaultParams, tree} = parseParametricSVG(svgString);
 
     if (onParse){
@@ -175,4 +175,4 @@ const ParamatericSVG = ({svgString, params, onParse, innerOnly}) => {
     }
 }
 
-export {ParamatericSVG, parseParametricSVG, PreviewSVG};
+export {ParametricSVG, parseParametricSVG, PreviewSVG};

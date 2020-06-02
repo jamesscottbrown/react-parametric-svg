@@ -13,7 +13,7 @@ Render using default parameter values:
 
 ```jsx
 import React from 'react';
-import {ParamatericSVG} from 'react-parametric-svg';
+import {ParametricSVG} from 'react-parametric-svg';
 
 const ExampleComponent = () => {
     const defaultSVGString = `<svg  version="1.1"
@@ -26,7 +26,7 @@ const ExampleComponent = () => {
         <circle parametric:cx="{x}" parametric:cy="{y}" r="40" stroke="black" stroke-width="3" fill="green" />
         </svg>`;
 
-    return <ParamatericSVG svgString={defaultSVGString} />;
+    return <ParametricSVG svgString={defaultSVGString} />;
 }
 
 ```
@@ -34,7 +34,7 @@ const ExampleComponent = () => {
 You can provide an object of values for the parameters (you don't need to specify values for all of them, as the values you provide will be merged with the defaults specified in the SVG):
 
 ```jsx
-<ParamatericSVG svgString={defaultSVGString} params={{d: 100}} />
+<ParametricSVG svgString={defaultSVGString} params={{d: 100}} />
 ```
 
 You can set `innerOnly={true}` to render just the contents of the SVG, not the actual SVG element itself.
@@ -44,13 +44,13 @@ This allows you to combine several parametric SVGs into a single SVG:
 
 <svg width="400" height="400">
     <g transform="translate(0, 0)">
-        <ParamatericSVG svgString={defaultSVGString} params={{d: 25}} innerOnly={true}/>
+        <ParametricSVG svgString={defaultSVGString} params={{d: 25}} innerOnly={true}/>
     </g>
     <g transform="translate(0, 100)">
-        <ParamatericSVG svgString={defaultSVGString} params={{d: 50}} innerOnly={true}/>
+        <ParametricSVG svgString={defaultSVGString} params={{d: 50}} innerOnly={true}/>
     </g>
     <g transform="translate(0, 200)">
-        <ParamatericSVG svgString={defaultSVGString} params={{d: 100}} innerOnly={true}/>
+        <ParametricSVG svgString={defaultSVGString} params={{d: 100}} innerOnly={true}/>
     </g>
 </svg>
 ```
