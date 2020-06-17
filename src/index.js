@@ -147,7 +147,7 @@ const Element = ({tree, params, defaultParams}) => {
                 }
 
             });
-            attributes[camelCase(ame.replace('parametric:', ''))] = value; // save version with paramater values substituted
+            attributes[camelCase(name.replace('parametric:', ''))] = value; // save version with paramater values substituted
         } else if (!attribute_names.includes('parametric:' + name)) {
             attributes[camelCase(name)] = value;
         } else {
