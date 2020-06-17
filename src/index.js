@@ -4,12 +4,12 @@ import * as math from 'mathjs';
 
 const processExpressionTerm = (term, parameters) => {
     const expression = term
-        .replace(/\{/g, '')
+        .replace(/{/g, '')
         .replace(/\(/g, '')
         .replace(/\)/g, '')
-        .replace(/\}/g, '')
+        .replace(/}/g, '')
         .replace(/\+/g, ' ')
-        .replace(/\-/g, ' ')
+        .replace(/-/g, ' ')
         .replace(/\^/g, ' ')
         .replace(/\//g, ' ')
         .replace(/\*/g, ' ')
