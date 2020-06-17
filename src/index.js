@@ -124,6 +124,12 @@ const Element = ({tree, params, defaultParams}) => {
     var attributes = {};
     const attribute_names = tree.attributes.map(d => d.name);
 
+    const camelCase = (name) => (
+        name.split('-')
+             .map((item, index) => index ? item.charAt(0).toUpperCase() + item.slice(1).toLowerCase() : item)
+             .join("")
+    );
+
     for (let i in tree.attributes) {
         let name = tree.attributes[i].name;
         let value = tree.attributes[i].value;
@@ -141,9 +147,9 @@ const Element = ({tree, params, defaultParams}) => {
                 }
 
             });
-            attributes[name.replace('parametric:', '')] = value; // save version with paramater values substituted
+            attributes[camelCase(ame.replace('parametric:', ''))] = value; // save version with paramater values substituted
         } else if (!attribute_names.includes('parametric:' + name)) {
-            attributes[name] = value;
+            attributes[camelCase(name)] = value;
         } else {
             // this is the non-parametric version of an attribute: don't replace value substituted above
         }
